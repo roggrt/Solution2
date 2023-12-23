@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--aw-color-primary)',
+        primary: '#84cc16',
         secondary: 'var(--aw-color-secondary)',
-        accent: 'var(--aw-color-accent)',
+        accent: '#84cc16',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        green: 'var(#84cc16)',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],

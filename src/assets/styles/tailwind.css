@@ -18,6 +18,9 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-solution {
+    color:  #98CA02;
+  }
 }
 
 @layer components {
@@ -26,7 +29,7 @@
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    @apply btn font-semibold bg-primary text-white border-primary hover:bg-lime-600 hover:border-lime-600 hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
   }
 
   .btn-secondary {
@@ -34,7 +37,7 @@
   }
 
   .btn-tertiary {
-    @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+    @apply btn border-none shadow-none text-white hover:bg-red-700 hover:text-white dark:text-gray-400 dark:hover:text-white bg-red-600;
   }
 }
 

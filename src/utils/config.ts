@@ -78,11 +78,11 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   analytics?: unknown;
 };
 
-const DEFAULT_SITE_NAME = 'Website';
+const DEFAULT_SITE_NAME = 'SolutionTracker';
 
 const getSite = () => {
   const _default = {
-    name: DEFAULT_SITE_NAME,
+    name: "SolutionTracker",
     site: undefined,
     base: '/',
     trailingSlash: false,
