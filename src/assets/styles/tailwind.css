@@ -63,6 +63,22 @@
   padding: 0 5px;
 }
 
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
