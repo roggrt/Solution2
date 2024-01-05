@@ -70,8 +70,9 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Términos y condiciones', href: getPermalink('/terms') },
+    { text: 'Términos y condiciones', href: getPermalink('/termns') },
     { text: 'Política de privacidad', href: getPermalink('/privacy') },
+    { text: '<br/>Sobre nosotros', href: getPermalink('/about') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:info-circle', href: 'https://www.emis.com/php/company-profile/EC/Solutiontracker_CiaLtda_es_8196323.html' },

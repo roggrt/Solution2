@@ -3,11 +3,12 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+// import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Sobre Nosotros',
 };
 ---
 
@@ -15,67 +16,90 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="Sobre Nosotros - SolutionTracker"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'https://scontent.fgye30-1.fna.fbcdn.net/v/t39.30808-6/331480417_874192563809378_5532602082448792171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=783fdb&_nc_ohc=5G7o-vJS6yMAX90nIyF&_nc_ht=scontent.fgye30-1.fna&oh=00_AfCHxmUkQWmhqKJdP4T0PpQqCAJqAh9WydkFytIdvrYCzQ&oe=659D3656',
       alt: 'Caos Image',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Somos una empresa líder en soluciones de rastreo satelital <br />
+      <span class="text-accent dark:text-white highlight"> que impulsan la eficiencia, seguridad y control de activos </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+     Descubra quiénes somos y por qué somos la elección preferida para empresas que buscan soluciones confiables y tecnológicamente avanzadas.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Datos sobre nosotros"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Dispositivos instalados', amount: '247367' },
+      { title: 'Clientes', amount: '31947' },
+      { title: 'Fue fundada', amount: '2018' },
+      { title: 'Partners mundiales', amount: '231' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Historia de la empresa"
+    subtitle="Desde nuestra fundación en 2018, en SolutionTracker nos hemos dedicado a proporcionar soluciones de rastreo satelital. Nuestra empresa ha evolucionado a lo largo de los años, adaptándose a las crecientes demandas de un mundo en constante cambio."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Misión',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+          'Facilitar la gestión eficiente y segura de activos a través de soluciones avanzadas de rastreo satelital.',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
+        title: 'Visión',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+          'Ser reconocidos a nivel mundial como líderes en tecnología de rastreo, destacando la excelencia, la innovación y la integridad en todo lo que hacemos.',
         icon: 'tabler:template',
       },
       {
-        title: 'Photography',
+        title: 'Valores',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+          'Compromiso con la calidad, innovación, integridad, y la satisfacción del cliente.',
         icon: 'tabler:template',
       },
     ]}
   />
+  
+  <Steps
+    title="En SolutionTracker, creemos en el compromiso con la satisfacción del cliente y la excelencia operativa."
+    tagline="Filosofía de Trabajo"
+    isReversed={true}
+    items={[
+      {
+        title: ' Nuestra filosofía se centra en ofrecer soluciones que no solo cumplen con las expectativas, sino que las superan.',
+        icon: 'tabler:vocabulary',
+      },
+      {
+        title: 'Nos enorgullece mantener una cultura empresarial que valora la innovación, la colaboración y el respeto. Nuestro equipo está formado por profesionales apasionados que comparten la visión de hacer de SolutionTracker una empresa líder y en constante evolución.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Impulsamos la industria de rastreo satelital a través de la adopción de tecnologías avanzadas. Nuestra dedicación a la innovación    nos permite ofrecer soluciones precisas, confiables y a la vanguardia.',
+        icon: 'tabler:code-circle',
+      },
+  
+    ]}
+    image={{
+      src: 'https://i.ibb.co/hdy3WYT/fotoss.jpg',
+      alt: 'Steps image',
+    }}
+  />
 
   <!-- Features3 Widget ************** -->
-
+<!-- 
   <Features3
     columns={3}
     isAfterContent={true}
@@ -121,11 +145,11 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Colorful Image',
     }}
-  />
+  /> -->
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
+  <!-- <Steps2
     title="Our values"
     subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
     items={[
@@ -145,11 +169,11 @@ const metadata = {
           'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
       },
     ]}
-  />
+  /> -->
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
+  <!-- <Steps2
     title="Achievements"
     subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
     isReversed={true}
@@ -176,10 +200,10 @@ const metadata = {
         icon: 'tabler:award',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
-
+<!-- 
   <Features2
     title="Our locations"
     tagline="Find us"
@@ -202,25 +226,36 @@ const metadata = {
         description: '3456 Lorem Ipsum St, 34567, São Paulo',
       },
     ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
+  /> -->
+<!-- 
+  Features2 Widget ************** -->
+ <script type="text/javascript">
+        var Tawk_API = Tawk_API || {};
+        (function () {
+          var s1 = document.createElement('script'),
+            s0 = document.getElementsByTagName('script')[0];
+          s1.async = true;
+          s1.src = 'https://embed.tawk.to/6570df9dff45ca7d47879005/1hh0ej09n';
+          s1.charset = 'UTF-8';
+          s1.setAttribute('crossorigin', '*');
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Soporte técnico"
+    tagline="Contáctanos"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Escríbenos',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          'Estamos aquí para responder a tus preguntas, ofrecerte asistencia y proporcionarte la información que necesitas',
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: 'Llámanos',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          '¿Prefieres hablar con nosotros directamente? ¡Nos encantaría escucharte! Comunícate con nuestro equipo llamando al +593 998 180 956.',
         icon: 'tabler:headset',
       },
     ]}
