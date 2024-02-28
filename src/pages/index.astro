@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+
 // import Padding from '~/components/widgets/Padding.astro';
 import Header from '~/components/widgets/Header.astro';
 
@@ -16,7 +17,7 @@ import Prices from '~/components/widgets/Pricing.astro';
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
-
+// import Stats from '~/components/widgets/Stats.astro';
 import appStoreImg from '~/assets/images/app-store.png';
 import googlePlayImg from '~/assets/images/google-play.png';
 
@@ -70,7 +71,7 @@ const metadata1 = {
           href: 'tel:0998180956',
           target: '_blank',
         },
-        { variant: 'tertiary', text: 'Emergencia monitoreo', href: 'tel:0998180956', target: '_blank' },
+        { variant: 'tertiary', text: 'Emergencia monitoreo', href: 'tel:0999955955', target: '_blank' },
       ]}
     >
       <script type="text/javascript">
@@ -137,6 +138,195 @@ const metadata1 = {
       s0.parentNode.insertBefore(s1, s0);
     })();
   </script>
+
+
+
+
+<!-- 
+
+<Stats
+    title="Datos sobre nosotros"
+    stats={[
+      { title: 'Dispositivos instalados', amount: '247367' },
+      { title: 'Clientes', amount: '31947' },   
+      { title: 'Partners mundiales', amount: '231' },
+    ]}
+  />
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .widget-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    flex: 0 0 auto;
+    width: 220px; /* Ancho deseado para cada elemento */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+</style>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", async function () {
+    const statsContainer = document.querySelector('.widget-wrapper');
+
+    let statsData = JSON.parse(localStorage.getItem('statsData')) || [
+      { title: 'Dispositivos instalados', amount: 1 },
+      { title: 'Clientes', amount: 5 },
+      { title: 'Partners mundiales', amount: 1 },
+    ];
+
+    // Función para actualizar los stats con nuevos valores basados en el tiempo transcurrido
+    function updateStatsFromTime() {
+      const currentTime = new Date();
+      const initialTime = new Date('2024-02-01'); // Cambia esta fecha según tus necesidades
+
+      const timeDifference = Math.abs(currentTime - initialTime) / 10000; // Diferencia de tiempo en segundos
+
+      // Actualizar los stats basados en el tiempo transcurrido
+      statsData = [
+        { title: 'Dispositivos instalados', amount: Math.floor(timeDifference * 0.05) }, // Por ejemplo, 0.5 actualizaciones por segundo
+        { title: 'Clientes', amount: Math.floor(timeDifference * 0.02) },
+        { title: 'Partners mundiales', amount: Math.floor(timeDifference * 0.001) },
+      ];
+
+      // Guardar los stats en localStorage
+      localStorage.setItem('statsData', JSON.stringify(statsData));
+
+      // Renderizar los stats actualizados
+      renderStats();
+    }
+
+    // Función para renderizar los stats en el DOM
+    function renderStats() {
+      statsContainer.innerHTML = ''; // Limpiar el contenedor
+
+      statsData.forEach(stat => {
+        const statElement = document.createElement('div');
+        statElement.classList.add('p-4', 'md:w-1/4', 'sm:w-1/2', 'w-full', 'min-w-[220px]', 'text-center', 'md:border-r', 'md:last:border-none', 'dark:md:border-slate-500');
+
+        const amountElement = document.createElement('div');
+        amountElement.classList.add('font-heading', 'text-primary', 'text-[2.6rem]', 'font-bold', 'dark:text-white', 'lg:text-5xl', 'xl:text-6xl');
+        amountElement.innerText = stat.amount.toLocaleString();
+
+        const titleElement = document.createElement('div');
+        titleElement.classList.add('text-sm', 'font-medium', 'uppercase', 'tracking-widest', 'text-gray-800', 'dark:text-slate-400', 'lg:text-base');
+        titleElement.innerText = stat.title;
+
+        statElement.appendChild(amountElement);
+        statElement.appendChild(titleElement);
+
+        statsContainer.appendChild(statElement);
+      });
+    }
+
+    // Llamar a la función para actualizar los stats basados en el tiempo transcurrido cada segundo
+    setInterval(updateStatsFromTime, 1000);
+
+    // Llamar a la función por primera vez para mostrar los stats iniciales
+    updateStatsFromTime();
+
+    // Llamar a la función para renderizar los stats
+    renderStats();
+  });
+</script>
+
+<!-- Contenedor para los stats -->
+<div class="widget-wrapper"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <Stats
+    title="Datos sobre nosotros"
+    stats={[
+      { title: 'Dispositivos instalados', amount: '247367' },
+      { title: 'Clientes', amount: '31947' },   
+      { title: 'Partners mundiales', amount: '231' },
+    ]}
+  /> -->
 
   <!--End of Tawk.to Script-->
   <!-- <script  src="//code.tidio.co/h8fkggv0hnu5trozmbksrogxtybm6gto.js" async></script> -->
