@@ -9,7 +9,8 @@ export const headerData = {
         { text: 'Servicios', href: '/#servicios' },
         { text: 'Clientes', href: '/#clientes' },
         { text: 'Contacto', href: '/#contacto' },
-        { text: 'Ingresar', href: 'https://www.mapon.com/new/' },
+        { text: 'Blog', href: '/blog', target: '_blank' },
+        { text: 'Ingresar', href: 'https://www.mapon.com/new/', target: '_blank' },
        
   
       ],
@@ -70,7 +71,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Términos y condiciones', href: getPermalink('/termns') },
+    { text: 'Términos y condiciones', href: getPermalink('/terms') },
     { text: 'Política de privacidad', href: getPermalink('/privacy') },
     { text: '<br/>Sobre nosotros', href: getPermalink('/about') },
   ],

@@ -1,6 +1,6 @@
 site:
   name: Rastreo satelital
-  site: 'https://astrowind.vercel.app'
+  site: 'https://solutiontracker.ec'
   base: '/'
   trailingSlash: false
 

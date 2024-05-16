@@ -31,13 +31,45 @@ const metadata = {
 };
 ---
 
+
+
+
+
 <Layout metadata={metadata}>
+
+
+  <section id="servicios" class="py-4 bg-lime-500 dark:bg-black text-gray-100 sm:py-12 lg:py-16 md:text-center">
+    <section class="px-4 sm:px-6 lg:px-8 ml-8 -mr-5 md:text-center" >
+      <!-- <div class="max-w-xl mx-auto xl:max-w-2xl"> -->
+      <div class="md:text-center sm:mx-auto lg:text-center">
+        <h2 class="-mt-6 dark:text-lime-500 py-5 font-bold leading-tight text-gray-50 sm:text-4xl xl:text-4xl ml-8 sm:text-center">
+         Blog Solution
+        </h2>
+        <h3 class="-mt-2 ml-8 text-1xl sm:ml-8 md:text-center lg:mx-auto">
+          Compartiremos con ustedes noticias de actualidad y artículos de interes tecnológico
+         </h3>
+      </div>
+    
+    </section>
+  </section>
+  
+  
+<!-- <p>ss</p>
+  <section class="bg-lime-500 dark:bg-black py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="md:text-center text-white text-2xl md:text-3xl font-bold mb-2">Solution Blog</h1>
+      <h4 class="text-center text-gray-200 text-2xl text-sm md:text-base">Compartiremos con ustedes noticias de actualidad y artículos de interés tecnológicos</h4>
+    </div>
+  </section> -->
+
+
+
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
+    <!-- <Headline
+      subtitle="Hola statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
     >
-      The Blog
-    </Headline>
+      Olis
+    </Headline> -->
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--
